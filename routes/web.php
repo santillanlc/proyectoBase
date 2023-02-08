@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', [HomeController::class, 'home']);
+
+//Rutas de alumnos
+Route::get('/alumno/consultar', [AlumnoController::class, 'consultar']);
+Route::get('/alumno/registrar', [AlumnoController::class, 'registrar']);
 
 Route::get('/blank', function () {
     return view('blankpage');
