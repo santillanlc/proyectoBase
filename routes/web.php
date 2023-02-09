@@ -24,6 +24,7 @@ Route::get('/home', [HomeController::class, 'home']);
 //Rutas de alumnos
 Route::get('/alumno/consultar', [AlumnoController::class, 'consultar']);
 Route::get('/alumno/registrar', [AlumnoController::class, 'registrar']);
+Route::get('/reporte/pdf', [AlumnoController::class, 'reportePdf']);
 
 Route::get('/blank', function () {
     return view('blankpage');

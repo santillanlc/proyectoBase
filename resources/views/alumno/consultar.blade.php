@@ -29,6 +29,9 @@
                         <a href="" class="btn btn-danger btn-sm">
                             <i class="fas fa-times"></i>
                         </a>
+                        <a href="{{ url('reporte/pdf') }}" class="btn btn-success btn-sm">
+                            <i class="far fa-file-pdf"></i>
+                        </a>
                     </td>
                 </tr>
             </tbody>
