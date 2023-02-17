@@ -37,6 +37,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/reporte/pdf', [AlumnoController::class, 'reportePdf']);
 
     Route::get('/reporte/pdf/{id}', [AlumnoController::class, 'reporteAlumnoPdf']);
+
+    //Rutas de administrador
+    Route::get('/homeAdministrador', [HomeController::class, 'homeAdministrador']);
 });
 
 require __DIR__.'/auth.php';
