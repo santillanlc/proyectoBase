@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\NoticiaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,7 @@ Route::middleware('auth')->group(function () {
 
     //Rutas de administrador
     Route::get('/homeAdministrador', [HomeController::class, 'homeAdministrador']);
+    Route::post('/homeAdministradorPublicar', [NoticiaController::class, 'publicar']);
 });
 
 require __DIR__.'/auth.php';

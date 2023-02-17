@@ -11,4 +11,9 @@ class Noticia extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'noticias';
+
+    protected $fillable = [
+        'mensaje'
+    ];
+    
 }

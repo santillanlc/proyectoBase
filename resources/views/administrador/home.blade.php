@@ -5,6 +5,32 @@
 @stop
 
 @section('contenido')
+
+
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+              <form action="{{url ('/homeAdministradorPublicar')}}" method= "POST">
+              @csrf
+              <div class="form-group">
+              <label for="">¿Qué estás pensando?</label>
+              <input type="text" class="form-control" name="mensaje" required> <br>
+              <input type="submit" value="Publicar" class="btn btn-primary">
+              </div>
+              </form>
+          </div>
+              
+                
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
 <section class="content">
     <div class="container-fluid">
       <div class="row">

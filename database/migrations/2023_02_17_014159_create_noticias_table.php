@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('noticias', function (Blueprint $table) {
             $table->id();
             $table->string('mensaje');
-            $table->date('fecha');
+
 
             $table->softDeletes();
             $table->timestamps();
