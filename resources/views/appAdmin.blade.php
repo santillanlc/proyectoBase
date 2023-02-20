@@ -189,7 +189,7 @@
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-users""></i>
+                    <i class="nav-icon fas fa-users"></i>
                     <p>
                        Alumnos
                       <i class="fas fa-angle-left right"></i>
@@ -210,6 +210,31 @@
                     </li>
                   </ul>
                 </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-chalkboard-teacher"></i>
+                      <p>
+                         Docentes
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{asset('/homeAdministrador/consultar/docente')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Consultar</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{asset('/homeAdministrador/registrar/docente')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Registrar</p>
+                        </a>
+                      </li>
+                    </ul>
+                </li>
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                       <i class="nav-icon far fa-clock"></i> 
