@@ -13,4 +13,15 @@ class NoticiaController extends Controller
         return redirect('/homeAdministrador');
         
     }
+    
+    function eliminar($id){
+        
+        $noticia = Noticia::find($id);
+        $noticia->delete();
+
+        return redirect('/homeAdministrador');
+        
+    }
+
+    
 }

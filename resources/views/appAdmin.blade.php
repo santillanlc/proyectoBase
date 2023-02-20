@@ -180,10 +180,10 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item active">
-                  <a href="{{asset('/home')}}" class="nav-link">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <a href="{{asset('/homeAdministrador')}}" class="nav-link">
+                    <i class="nav-icon far fa-newspaper"></i>
                     <p>
-                      Inicio
+                      Noticias
                     </p>
                   </a>
                 </li>

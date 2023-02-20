@@ -41,7 +41,9 @@ Route::middleware('auth')->group(function () {
 
     //Rutas de administrador
     Route::get('/homeAdministrador', [HomeController::class, 'homeAdministrador']);
-    Route::post('/homeAdministradorPublicar', [NoticiaController::class, 'publicar']);
+    Route::post('/homeAdministrador/publicar', [NoticiaController::class, 'publicar']);
+    Route::get('/homeAdministrador/eliminar/{id}', [NoticiaController::class, 'eliminar']);
+
 });
 
 require __DIR__.'/auth.php';

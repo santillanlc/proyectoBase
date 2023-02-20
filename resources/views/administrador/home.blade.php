@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="form-group">
-              <form action="{{url ('/homeAdministradorPublicar')}}" method= "POST">
+              <form action="{{url ('/homeAdministrador/publicar')}}" method= "POST">
               @csrf
               <div class="form-group">
               <label for="">¿Qué estás pensando?</label>
@@ -48,6 +48,8 @@
                 </div>
                 <div class="timeline-footer">
                   <a class="btn btn-primary btn-sm">Ir al detalle</a>
+                  <a href="{{url('/homeAdministrador/eliminar')}}/{{$n->id}}" class="btn btn-danger btn-sm">Eliminar</a>
+
                 </div>
               </div>
             </div>
