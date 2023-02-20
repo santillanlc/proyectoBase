@@ -23,7 +23,7 @@
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-mini sidebar-collapse">
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-dark border-bottom-0" style="background-color: #065698;">
+        <nav class="main-header navbar navbar-expand navbar-dark border-bottom-0" style="background-color: #722C2C;">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -203,7 +203,7 @@
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{asset('/alumno/registrar')}}" class="nav-link">
+                      <a href="{{asset('/homeAdministrador/registrar/alumno')}}" class="nav-link"> 
                         <i class="far fa-circle nav-icon"></i>
                         <p>Registrar</p>
                       </a>
@@ -212,9 +212,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                      <i class="nav-icon fas fa-tools""></i>
+                      <i class="nav-icon far fa-clock"></i> 
                       <p>
-                         Otro menu
+                         Horario
                         <i class="fas fa-angle-left right"></i>
                       </p>
                     </a>
@@ -222,17 +222,42 @@
                       <li class="nav-item">
                         <a href="{{asset('')}}" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Consultar</p>
+                          <p>Generar horarios</p>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="{{asset('')}}" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Registrar</p>
+                          <p>Consultar horarios</p>
                         </a>
                       </li>
                     </ul>
                 </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon far fa-clock"></i> 
+                      <p>
+                         (PENDIENTE)
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{asset('/homeAdministrador/reglamento')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Reglamento escolar</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{asset('')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Consultar horarios</p>
+                        </a>
+                      </li>
+                    </ul>
+                </li>
+
               </ul>
             </nav>
             <!-- /.sidebar-menu -->

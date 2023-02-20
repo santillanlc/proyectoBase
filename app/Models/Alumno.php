@@ -12,5 +12,13 @@ class Alumno extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'nombre',
+        'edad',
+        'curp',
+        'direccion',
+        'nombre_tutor',
+        'numero_tutor'
+    ];
    
 }

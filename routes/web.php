@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\ReglamentoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/homeAdministrador', [HomeController::class, 'homeAdministrador']);
     Route::post('/homeAdministrador/publicar', [NoticiaController::class, 'publicar']);
     Route::get('/homeAdministrador/eliminar/{id}', [NoticiaController::class, 'eliminar']);
+    Route::get('/homeAdministrador/reglamento', [ReglamentoController::class, 'reglamento']);
+    Route::get('/homeAdministrador/registrar/alumno', [AlumnoController::class, 'registrar']);
+    Route::get('/homeAdministrador/consultar/alumno', [AlumnoController::class, 'consultar']);
+    Route::post('/homeAdministrador/alumno/registrado', [AlumnoController::class, 'guardar']);
+    
 
 });
 

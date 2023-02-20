@@ -11,13 +11,26 @@ class AlumnoController extends Controller
     public function consultar(){
         $alumnos = Alumno::all();
 
-        return view('alumno.consultar', compact('alumnos'));
+        return view('administrador.alumno.consultar', compact('alumnos'));
     }
 
     public function registrar(){
-        //consultas el alumno
-        return view('alumno.registrar');
+
+        return view('administrador.alumno.registrar');
+        
+        
     }
+
+    public function guardar(Request $datos){ 
+
+        $alumno = Alumno::create($datos->post());
+        return redirect('/homeAdministrador/registrar/alumno');
+
+
+
+
+    }
+    
 
     public function reportePdf(){
         $alumnos = array("Alumno1", "Alumno2", "Alumno3"); //DAtos de la base de datos
@@ -32,4 +45,6 @@ class AlumnoController extends Controller
         $pdf = PDF::loadView('PDF.reporteAlumno', array('alumno' => $alumno)); //Carga la vista y la convierte a PDF
         return $pdf->download("reporteAlumno".$alumno->id.".pdf"); //Descarga el PDF con ese nombre
     }
+
+
 }
