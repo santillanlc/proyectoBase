@@ -1,7 +1,7 @@
 @extends('appAdmin')
 
 @section('titulo')
-    <h1>Noticias</h1>
+    <h1 style="color: #757575">Noticias</h1>
 @stop
 
 @section('contenido')
