@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->integer('edad');
             $table->string('direccion');
+            $table->string('correo');
             $table->string('numero');
             $table->string('semestre');
 

@@ -24,7 +24,7 @@ class AlumnoController extends Controller
     public function guardar(Request $datos){ 
 
         $alumno = Alumno::create($datos->post());
-        return redirect('/homeAdministrador/registrar/alumno');
+        return redirect('/homeAdministrador/consultar/alumno');
 
 
 

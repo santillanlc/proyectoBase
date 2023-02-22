@@ -14,6 +14,7 @@ class Docente extends Model
         'nombre',
         'edad',
         'direccion',
+        'correo',
         'numero',
         'semestre'
     ];

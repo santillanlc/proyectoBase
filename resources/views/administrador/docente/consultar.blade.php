@@ -18,6 +18,7 @@
                     <th>Nombre</th>
                     <th>Edad</th>
                     <th>Dirección</th>
+                    <th>Correo</th>
                     <th>Número telefónico</th>
                     <th>Semestres que imparte</th>
                     <th></th>
@@ -30,6 +31,7 @@
                     <td>{{ $a->nombre }}</td>
                     <td>{{ $a->edad }}</td>
                     <td>{{ $a->direccion }}</td>
+                    <td>{{ $a->correo }}</td>
                     <td>{{ $a->numero }}</td>
                     <td>{{ $a->semestre }}</td>
                     <td>

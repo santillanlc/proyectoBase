@@ -22,7 +22,7 @@ class DocenteController extends Controller
     public function guardar(Request $datos){ 
 
         $docente = Docente::create($datos->post());
-        return redirect('/homeAdministrador/registrar/docente');
+        return redirect('/homeAdministrador/consultar/docente');
 
 
 
