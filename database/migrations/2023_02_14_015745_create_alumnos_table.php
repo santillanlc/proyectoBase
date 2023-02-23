@@ -15,10 +15,18 @@ return new class extends Migration
     {
         Schema::create('alumnos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->integer('edad');
+            $table->string('carrera');
+            $table->string('generacion');
+            $table->string('turno');
+            $table->integer('semestre');
             $table->string('grupo');
-            $table->boolean('sexo');
+            $table->string('numero_control');
+            $table->string('nombre');
+            $table->string('paterno');
+            $table->string('materno');
+            $table->string('nombre_completo');
+            $table->string('CURP');
+            $table->string('sexo');
 
             $table->timestamps();
             $table->softDeletes();
