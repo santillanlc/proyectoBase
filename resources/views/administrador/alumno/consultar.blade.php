@@ -10,7 +10,14 @@
 @stop
 
 @section('contenido')
-    <div class="responsive-table">
+     
+    <form class="form-inline my-2 my-lg-0 float-right" method="get" action="{{ url('/alumno/consultar')}}" role="Search">
+      <input name="termino" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" value="{{request()->get('termino','')}}">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form><br><br>
+    
+    <div class="table-responsive">
+        
         <table class ="table table-striped table-bordered table-sm" cellspacing="0">
             <thead>
                 <tr>
@@ -20,14 +27,14 @@
                     <th>Turno</th>
                     <th>Semestre</th>
                     <th>Grupo</th>
-                    <th style="width: 10px;">Número de control</th>
+                    <th>Número de control</th>
                     <th>Nombre</th>
                     <th>Apellido paterno</th>
                     <th>Apellido materno</th>
                     <th>Nombre completo</th>
                     <th>CURP</th>
                     <th>Sexo</th>
-                    <th></th>
+                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,5 +65,6 @@
                 @endforeach
             </tbody>
         </table>
+        <div>{{$alumnos->links()}}</div>
     </div>
 @stop

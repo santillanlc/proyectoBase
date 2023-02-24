@@ -8,8 +8,13 @@ use Illuminate\Http\Request;
 
 class AlumnoController extends Controller
 {
-    public function consultar(){
-        $alumnos = Alumno::all();
+    public function consultar(Request $request){
+       
+        $alumnos=Alumno::when($request->has("termino"), function($q) use ($request){
+          return $q->where("nombre_completo", "like", "%".$request->get("termino")."%");
+        })->orderBy('id', 'desc')->paginate(15);
+        
+        $alumnos->appends($request->all());
 
         return view('administrador.alumno.consultar', compact('alumnos'));
     }
