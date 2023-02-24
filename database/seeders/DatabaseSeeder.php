@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Database\Seeders\AlumnoSeeder;
 use Database\Seeders\NoticiaSeeder;
+use Database\Seeders\MateriaSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +19,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AlumnoSeeder::class);
         $this->call(NoticiaSeeder::class);
+        $this->call(MateriaSeeder::class);
     }
 }
