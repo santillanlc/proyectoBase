@@ -11,7 +11,7 @@ class AlumnoController extends Controller
     public function consultar(Request $request){
        
         $alumnos=Alumno::when($request->has("termino"), function($q) use ($request){
-          return $q->where("nombre_completo", "like", "%".$request->get("termino")."%");
+         return $q->where("nombre_completo", "like", "%".$request->get("termino")."%");
         })->orderBy('id', 'desc')->paginate(15);
         
         $alumnos->appends($request->all());
