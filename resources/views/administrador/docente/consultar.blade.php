@@ -10,6 +10,12 @@
 @stop
 
 @section('contenido')
+
+<form class="form-inline my-2 my-lg-0 float-right" method="get" action="{{ url('/homeAdministrador/consultar/docente')}}" role="Search">
+      <input name="termino" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" value="{{request()->get('termino','')}}">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form><br><br>
+
 <div class="responsive-table">
         <table class="table table-hover">
             <thead>

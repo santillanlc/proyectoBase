@@ -124,7 +124,7 @@
 
 <div class="footer">
     <p>MARTITZA DEL CARMEN CAZAREZ RIOS</p>
-    <p>_____________</p>
+    <p>________________________________</p>
     <p style="font-size: 8px">LA DIRECTORA DEL PLANTEL</p>
 </div>
 </body>

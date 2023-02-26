@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 
 class DocenteController extends Controller
 {
-    public function consultar(){
-        $docentes = Docente::all();
+    public function consultar(Request $request){
+        $docentes = Docente::when($request->has("termino"), function($q) use ($request){
+        return $q->where("nombre", "like", "%".$request->get("termino")."%");
+        })->orderBy('id', 'desc')->paginate(15);
+        
+        $docentes->appends($request->all());
+        
         return view('administrador.docente.consultar', compact('docentes'));
     }
 
