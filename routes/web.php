@@ -47,7 +47,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/homeAdministrador/eliminar/{id}', [NoticiaController::class, 'eliminar']);
     Route::get('/homeAdministrador/reglamento', [ReglamentoController::class, 'reglamento']);
     Route::get('/homeAdministrador/registrar/alumno', [AlumnoController::class, 'registrar']);
-    Route::get('/homeAdministrador/consultar/alumno', [AlumnoController::class, 'consultar']);
     Route::post('/homeAdministrador/alumno/registrado', [AlumnoController::class, 'guardar']);
     Route::get('/homeAdministrador/consultar/docente', [DocenteController::class, 'consultar']);
     Route::get('/homeAdministrador/registrar/docente', [DocenteController::class, 'registrar']);
