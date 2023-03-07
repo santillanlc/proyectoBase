@@ -135,9 +135,9 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar elevation-4 sidebar-light-warning">
           <!-- Brand Logo -->
-          <a href="{{asset('/home')}}" class="brand-link">
+          <a href="{{asset('/homeAdministrador')}}" class="brand-link">
             <img src="{{ url('images/AdminLTELogo.png') }}" alt="baessh" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">Proyecto base</span>
+            <span class="brand-text font-weight-light">Proyecto</span>
           </a>
 
           <!-- Sidebar -->

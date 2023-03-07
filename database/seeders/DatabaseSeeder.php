@@ -8,6 +8,8 @@ use Database\Seeders\AlumnoSeeder;
 use Database\Seeders\NoticiaSeeder;
 use Database\Seeders\MateriaSeeder;
 use Database\Seeders\DocenteSeeder;
+use Database\Seeders\RoleSeeder;
+use Database\Seeders\UserSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,5 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(NoticiaSeeder::class);
         $this->call(MateriaSeeder::class);
         $this->call(DocenteSeeder::class);
+        $this->call(RoleSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
