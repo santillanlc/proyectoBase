@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ReglamentoController;
 use App\Http\Controllers\DocenteController;
+use App\Http\Controllers\NoticiasAlumnoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,20 +28,16 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::group(['middleware' => ['admin', 'role:admin']], function(){
+Route::group(['middleware' => ['alumno', 'role:alumno']], function(){
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
+    Route::get('/homeNoticia', [NoticiasAlumnoController::class, 'home']);
     Route::get('/home', [HomeController::class, 'home']);
 
-    //Rutas de alumnos
-    Route::get('/alumno/consultar', [AlumnoController::class, 'consultar']);
-    Route::get('/alumno/registrar', [AlumnoController::class, 'registrar']);
-    Route::get('/reporte/pdf', [AlumnoController::class, 'reportePdf']);
-    Route::get('/reporte/pdf/{id}', [AlumnoController::class, 'reporteAlumnoPdf']);
-
     
+});
+Route::group(['middleware' => ['admin', 'role:admin']], function(){
     //Rutas de administrador
     Route::get('/homeAdministrador', [HomeController::class, 'homeAdministrador']);
     Route::post('/homeAdministrador/publicar', [NoticiaController::class, 'publicar']);
@@ -52,7 +49,11 @@ Route::group(['middleware' => ['admin', 'role:admin']], function(){
     Route::get('/homeAdministrador/registrar/docente', [DocenteController::class, 'registrar']);
     Route::post('/homeAdministrador/docente/registrado', [DocenteController::class, 'guardar']);
 
-    
+    //Rutas de alumnos
+    Route::get('/alumno/consultar', [AlumnoController::class, 'consultar']);
+    Route::get('/alumno/registrar', [AlumnoController::class, 'registrar']);
+    Route::get('/reporte/pdf', [AlumnoController::class, 'reportePdf']);
+    Route::get('/reporte/pdf/{id}', [AlumnoController::class, 'reporteAlumnoPdf']);
 
 });
 
