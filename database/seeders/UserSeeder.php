@@ -22,9 +22,10 @@ class UserSeeder extends Seeder
         ])->assignRole('admin');
 
         User::create([
-            'name' => 'Francisco',
-            'email' => 'Francisco@gamil.com',
-            'password' => bcrypt('francisco123')
+            'name' => 'DAMIAN EDUARDO',
+            'alumno_id' => 1,
+            'email' => 'damian@gmail.com',
+            'password' => bcrypt('damian123')
         ])->assignRole('alumno');
     }
 
