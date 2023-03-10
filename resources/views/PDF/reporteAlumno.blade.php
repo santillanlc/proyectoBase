@@ -39,6 +39,9 @@
             bottom: 0;
             width: 100%;
         }
+        .tam{
+          font-size: 8px;
+        }
 
     </style>
 </head>
@@ -56,59 +59,49 @@
   <div class="card-body">
     <blockquote class="blockquote mb-0">
 
-    <div>
-    
-
-            <p><b>Nombre del subsistema</b> <small>DIRECCIÓN GENERAL DE EDUCACIÓN TECNOLÓGICA INDUSTRIAL Y DE SERVICIOS</small></p>
-            <p><b>CURP:</b> <small>{{ $alumno-> CURP}}</small></p> 
-            <p><b>Nombre del alumno:</b> <small>{{ $alumno-> nombre_completo}}</small></p>
-            <p><b>Folio RNA:</b></p>
-            <p><b>Periodo Ingreso:</b></p>
-            <p><b>Avance creditos:</b></p>
-        
-        </div>
-
-
-
-            <p><b>Nombre del subsistema</b> <small>DIRECCIÓN GENERAL DE EDUCACIÓN TECNOLÓGICA INDUSTRIAL Y DE SERVICIOS</small></p>
-
-
-</div>
+    <div class="float-left">
+      <p><b>Nombre del subsistema</b> <small>DIRECCIÓN GENERAL DE EDUCACIÓN TECNOLÓGICA <br>INDUSTRIAL Y DE SERVICIOS</small></p>
+      <p><b>CURP:</b> <small>{{ $alumno-> CURP}}</small></p> 
+      <p><b>Nombre del alumno:</b> <small>{{ $alumno-> nombre_completo}}</small></p>
+      <p><b>Folio RNA:</b></p>
+      <p><b>Periodo Ingreso:</b></p>
+      <p><b>Avance creditos:</b></p>
     </div>
+      <p><b>Nombre del Plantel:</b> <small>CENTRO DE ESTUDIOS TECNOLÓGICA INDUSTRIAL Y DE SERVICIOS</small></p>
+      <p><b>Modalidad educativa:</b> <small>Escolarizada</small></p>
+      <p><b>Opción educativa:</b> <small>Presencial</small></p>
+      <p><b>Plan de Estudios:</b> <small>Acuerdo 653</small></p>
+      <p><b>Carrera Técnica en:</b> <small>{{$alumno->carrera}}</small></p>
     </blockquote>
   </div>
 </div>
+    
+    
+  </div>
+</div>
 
-    <br><br>
-     <div class="responsive-table ">
-    <table class="table table-bordered">
-  <thead>
+<br><br>
+<div class="responsive-table ">
+<table class="table table-bordered table-sm">
+  <thead class="tam">
     <tr>
+      <th scope="col">Nombre Plantel</th>
+      <th scope="col">Semestre</th>
       <th scope="col">Nombre</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Calif</th>
+      <th scope="col">Periodo Escolar</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="tam">
+  @foreach ($alumno->materias as $a)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">CETIS NO.107</th>
+      <td>PENDIENTE</td>
+      <td>{{$a->materia->nombre}}</td>
+      <td>{{$a->calificacion}}</td>
+      <td>{{$a->periodo}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    @endforeach
   </tbody>
 </table>
 </div> 

@@ -27,22 +27,30 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+      <li class="nav-item active"> 
+        <a class="nav-link" href="">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           Opciones
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Perfil</a>
+          <a class="dropdown-item" href="#">Horario</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Kardex</a>
         </div>
       </li>
     </ul>
   </div>
+    <a class="d-block" href="{{ route('logout') }}"
+      onclick="event.preventDefault();
+      document.getElementById('logout-form').submit();" style = "color: white;">
+      {{ __('Cerrar sesión') }}
+    </a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+    @csrf
+    </form>
 </nav>
 <section class="content" style="padding:0 .99rem !important;">
   <div class="card card-secondary">

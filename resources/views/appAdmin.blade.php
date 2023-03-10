@@ -17,6 +17,9 @@
     div nav ul {
         justify-content: center;
     }
+    li {
+      font-size: 21px;
+    }
   </style>
 
 </head>
@@ -237,7 +240,7 @@
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                      <i class="nav-icon far fa-clock"></i> 
+                      <i class="nav-icon far fa-calendar-alt"></i> 
                       <p>
                          Horario
                         <i class="fas fa-angle-left right"></i>
@@ -261,9 +264,9 @@
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                      <i class="nav-icon far fa-clock"></i> 
+                      <i class="nav-icon fas fa-bookmark"></i>
                       <p>
-                         (PENDIENTE)
+                         Reglamento
                         <i class="fas fa-angle-left right"></i>
                       </p>
                     </a>
@@ -274,10 +277,12 @@
                           <p>Reglamento escolar</p>
                         </a>
                       </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
                       <li class="nav-item">
-                        <a href="{{asset('')}}" class="nav-link">
+                        <a href="{{asset('/homeAdministrador/reglamento')}}" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Consultar horarios</p>
+                          <p>Descargar Reglamento</p>
                         </a>
                       </li>
                     </ul>

@@ -21,6 +21,8 @@ class AdminMiddleware
             return $next($request);
         }elseif (Auth::check() && Auth::user()->hasRole('alumno')){
             return redirect('/home');
+        }else {
+            return redirect('/login');
         }
     }
 }
