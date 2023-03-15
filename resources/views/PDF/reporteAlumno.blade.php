@@ -42,6 +42,9 @@
         .tam{
           font-size: 8px;
         }
+        .margen{
+          width: 40%;
+        }
 
     </style>
 </head>
@@ -52,33 +55,49 @@
 
    
 
-<div class="card">
-  <div class="card-header" style="background-color: #4b5050;  color: white; text-align: center">
-    Historial Académico
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
 
-    <div class="float-left">
-      <p><b>Nombre del subsistema</b> <small>DIRECCIÓN GENERAL DE EDUCACIÓN TECNOLÓGICA <br>INDUSTRIAL Y DE SERVICIOS</small></p>
-      <p><b>CURP:</b> <small>{{ $alumno-> CURP}}</small></p> 
-      <p><b>Nombre del alumno:</b> <small>{{ $alumno-> nombre_completo}}</small></p>
-      <p><b>Folio RNA:</b></p>
-      <p><b>Periodo Ingreso:</b></p>
-      <p><b>Avance creditos:</b></p>
-    </div>
-      <p><b>Nombre del Plantel:</b> <small>CENTRO DE ESTUDIOS TECNOLÓGICA INDUSTRIAL Y DE SERVICIOS</small></p>
-      <p><b>Modalidad educativa:</b> <small>Escolarizada</small></p>
-      <p><b>Opción educativa:</b> <small>Presencial</small></p>
-      <p><b>Plan de Estudios:</b> <small>Acuerdo 653</small></p>
-      <p><b>Carrera Técnica en:</b> <small>{{$alumno->carrera}}</small></p>
-    </blockquote>
-  </div>
-</div>
-    
-    
-  </div>
-</div>
+<table style = "margin-left: auto; margin-right: auto;">
+  <tr style = "background-color: #454545; text-align: center; color: white;" >
+    <td colspan="2" >Historial Académico</td>
+  </tr>
+    <tr>
+      <td><p><b>Nombre del subsistema:</b><br> DIRECCIÓN GENERAL DE EDUCACIÓN <br>TECNOLÓGICA INDUSTRIAL Y DE <br>SERVICIOS</p></td>
+      <td><p><b>CURP:</b><br> {{ $alumno-> CURP}}</p></td>
+    </tr>
+
+    <tr>
+    <td><p><b>Nombre del Plantel:</b><br> CENTRO DE ESTUDIOS TECNOLÓGICA <br>INDUSTRIAL Y DE SERVICIOS</p></td> 
+    <td><p><b>Nombre del alumno:</b><br> {{ $alumno-> nombre_completo}}</p></td> 
+    </tr>
+
+  
+
+    <tr>
+    <td><p><b>Folio RNA:</b></p></td>
+    <td><p><b>Periodo Ingreso:</b></p></td>
+    </tr>
+
+    <tr>
+    <td><p><b>Avance creditos:</b></p></td>
+    <td><p><b>Modalidad educativa:</b></p></td>
+    </tr>
+
+    <tr>
+    <td><p><b>Escolarizada</b></p></td>
+    <td><p><b>Opción educativa:</b><br>Presencial</p></td>
+    </tr>
+
+
+    <tr>
+    <td><p><b>Plan de Estudios:</b><br>Acuerdo 653</p></td>
+    <td><p><b>Carrera Técnica en:</b><br> {{$alumno->carrera}} </p></td>
+    </tr>
+
+
+
+</table>
+
+
 
 <br><br>
 <div class="responsive-table ">

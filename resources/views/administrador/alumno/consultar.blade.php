@@ -54,12 +54,15 @@
                     <td>{{ $a->CURP }}</td>
                     <td>{{ $a->sexo }}</td>
                     <td>
-                        <a href="" class="btn btn-danger btn-sm">
-                            <i class="fas fa-times"></i>
-                        </a>
+
                         <a href="{{ url('reporte/pdf') }}/{{ $a->id }}" class="btn btn-success btn-sm">
                             <i class="far fa-file-pdf"></i>
                         </a>
+
+                        <a href="" class="btn btn-danger btn-sm">
+                            <i class="fas fa-times"></i>
+                        </a>
+                        
                     </td>
                 </tr>
                 @endforeach
