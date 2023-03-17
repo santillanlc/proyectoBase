@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proyecto Base</title>
+  <title>SISCONED</title>
   <link rel="icon" type="image/x-icon" href="{{ url('images/logohb.ico') }}">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -18,7 +18,7 @@
         justify-content: center;
     }
     li {
-      font-size: 21px;
+      font-size: 18px;
     }
   </style>
 
@@ -139,8 +139,8 @@
         <aside class="main-sidebar elevation-4 sidebar-light-warning">
           <!-- Brand Logo -->
           <a href="{{asset('/homeAdministrador')}}" class="brand-link">
-            <img src="{{ url('images/AdminLTELogo.png') }}" alt="baessh" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">Proyecto</span>
+            <img src="{{ url('images/DGETI2.png') }}" alt="baessh" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">SISCONED</span>
           </a>
 
           <!-- Sidebar -->
