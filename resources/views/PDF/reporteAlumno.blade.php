@@ -45,7 +45,32 @@
         .margen{
           width: 40%;
         }
+        table{
+          width: 85%;
+         
+          
+        }
+        .relleno{
+          padding-left: 20px;
+          padding-right: 20px;
+         
+          
+        }
+        .relleno1{
+          padding-left: 20px;
+          padding-right: 120px;
+          padding-top: 15px;
+          
+        }
 
+        .relleno2{
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 15px;
+          
+        }
+        
+    
     </style>
 </head>
 <body>
@@ -56,42 +81,45 @@
    
 
 
-<table style = "margin-left: auto; margin-right: auto;">
-  <tr style = "background-color: #454545; text-align: center; color: white;" >
-    <td colspan="2" >Historial Académico</td>
-  </tr>
+<table style = "margin-left: auto; margin-right: auto;"">
+  <tr style = "background-color: #454545; text-align: center; color: white;"  class="principal">
+    <td colspan="2" >Historial Académico</td> 
+  </tr> 
+  
     <tr>
-      <td><p><b>Nombre del subsistema:</b><br> DIRECCIÓN GENERAL DE EDUCACIÓN <br>TECNOLÓGICA INDUSTRIAL Y DE <br>SERVICIOS</p></td>
-      <td><p><b>CURP:</b><br> {{ $alumno-> CURP}}</p></td>
+      <td class="relleno1"><p><b>Nombre del subsistema:</b><br> DIRECCIÓN GENERAL DE EDUCACIÓN <br>TECNOLÓGICA INDUSTRIAL Y DE <br>SERVICIOS</p></td>
+      <td class="relleno"><p><b>CURP:</b><br> {{ $alumno-> CURP}}</p></td>
     </tr>
 
     <tr>
-    <td><p><b>Nombre del Plantel:</b><br> CENTRO DE ESTUDIOS TECNOLÓGICA <br>INDUSTRIAL Y DE SERVICIOS</p></td> 
-    <td><p><b>Nombre del alumno:</b><br> {{ $alumno-> nombre_completo}}</p></td> 
+    <td class="relleno"><p><b>Nombre del Plantel:</b><br> CENTRO DE ESTUDIOS TECNOLÓGICA <br>INDUSTRIAL Y DE SERVICIOS</p></td> 
+    <td class="relleno"><p><b>Nombre del alumno:</b><br> {{ $alumno-> nombre_completo}}</p></td> 
     </tr>
 
   
 
     <tr>
-    <td><p><b>Folio RNA:</b></p></td>
-    <td><p><b>Periodo Ingreso:</b></p></td>
+    <td class="relleno"><p><b>Folio RNA:</b></p></td>
+    <td class="relleno"><p><b>Periodo Ingreso:</b></p></td>
     </tr>
 
     <tr>
-    <td><p><b>Avance creditos:</b></p></td>
-    <td><p><b>Modalidad educativa:</b></p></td>
+    <td class="relleno"><p><b>Avance creditos:</b></p></td>
+    <td class="relleno"><p><b>Modalidad educativa:</b></p></td>
     </tr>
 
     <tr>
-    <td><p><b>Escolarizada</b></p></td>
-    <td><p><b>Opción educativa:</b><br>Presencial</p></td>
+    <td class="relleno"><p><b>Escolarizada</b></p></td>
+    <td class="relleno"><p><b>Opción educativa:</b><br>Presencial</p></td>
     </tr>
 
 
     <tr>
-    <td><p><b>Plan de Estudios:</b><br>Acuerdo 653</p></td>
-    <td><p><b>Carrera Técnica en:</b><br> {{$alumno->carrera}} </p></td>
+    <td class="relleno"><p><b>Plan de Estudios:</b><br>Acuerdo 653</p></td>
+    <td class="relleno"><p><b>Carrera Técnica en:</b><br> {{$alumno->carrera}} </p></td>
     </tr>
+
+  
 
 
 
