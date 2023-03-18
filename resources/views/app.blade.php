@@ -31,14 +31,14 @@
   </div>
     <ul class="navbar-nav">
       <li class="nav-item active"> 
-        <a class="nav-link" href="">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{asset('/home')}}">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           <i class="far fa-user-circle"></i>
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Perfil</a>
+          <a class="dropdown-item" href="{{asset('/perfilalumno')}}">Perfil</a>
           <a class="dropdown-item" href="#">Horario</a>
           <a class="dropdown-item" href="#">Kardex</a>
           <div class="dropdown-divider"></div>

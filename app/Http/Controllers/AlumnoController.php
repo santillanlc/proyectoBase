@@ -35,10 +35,22 @@ class AlumnoController extends Controller
 
 
     }
+
+    public function perfil(){
+        $alumnos=Alumno::where('id', "=", 1)->get();
+        dd($alumnos);
+        return view('alumno.perfilalumno');
+    }
+
+    public function inicio(){
+       
+    
+        return view('');
+    }
     
 
     public function reportePdf(){
-        $alumnos = array("Alumno1", "Alumno2", "Alumno3"); //DAtos de la base de datos
+        $alumnos = array("Alumno1", "Alumno2", "Alumno3"); //Datos de la base de datos
         PDF::SetPaper('A4', 'landscape'); //Configuracion de la libreria
         $pdf = PDF::loadView('PDF.reporteGenerico', array('alumnos' => $alumnos)); //Carga la vista y la convierte a PDF
         return $pdf->download("reporteGenerico.pdf"); //Descarga el PDF con ese nombre
