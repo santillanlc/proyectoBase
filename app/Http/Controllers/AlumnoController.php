@@ -38,7 +38,7 @@ class AlumnoController extends Controller
 
     public function perfil(){
         $alumnos=Alumno::where('id', "=", 1)->get();
-        dd($alumnos);
+
         return view('alumno.perfilalumno');
     }
 
