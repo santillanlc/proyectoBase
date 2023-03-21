@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use PDF;
 use App\Models\Alumno;
 use Illuminate\Http\Request;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class AlumnoController extends Controller
 {
@@ -42,4 +43,9 @@ class AlumnoController extends Controller
         dd($alumno);
 
     }
+
+    public function generaQR(){
+        return QrCode::size(300)->generate('Aquí va La URL que se va a acceder');
+    }
+
 }
