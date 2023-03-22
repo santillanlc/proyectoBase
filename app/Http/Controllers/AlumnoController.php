@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use PDF;
 use App\Models\Alumno;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AlumnoController extends Controller
 {
@@ -37,9 +38,10 @@ class AlumnoController extends Controller
     }
 
     public function perfil(){
-        $alumnos=Alumno::where('id', "=", 1)->get();
 
-        return view('alumno.perfilalumno');
+        $alumno=Alumno::find(Auth::user()->alumno_id);
+        
+        return view('alumno.perfilalumno', compact('alumno')); 
     }
 
     public function inicio(){

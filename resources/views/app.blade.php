@@ -22,7 +22,7 @@
 <body>
   <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark" style = "background-color: #5E2A2A;">
-  <a class="navbar-brand" href="#">Cetis No.107</a>
+  <a class="navbar-brand" href="#">Nombre del plantel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -52,13 +52,10 @@
       </li>
     </ul>
 </nav>
-<section class="content" style="padding:0 .99rem !important;">
-  <div class="card card-secondary">
-    <div class="card-body table-responsive">
+<br>
+
       @yield('contenido')
-    </div>
-  </div>
-  </section>
+   
   <!-- jQuery -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <!-- overlayScrollbars -->
